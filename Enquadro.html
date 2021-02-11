@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pode dirigir ou não</title>
+</head>
+<body>
+
+<script>
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+    alert("Encosta a nave!! Isso é uma abordagem!")
+    var nome = prompt("Qual o seu nome?");
+    var idade = parseInt(prompt(nome + ", Qual é sua idade?"));
+    var temCarteira = prompt(nome + ", Papo reto, Tem carteira? Digite S para SIM ou N para não");
+
+    if(idade >= 18 && temCarteira == "S") {
+
+        mostra("Está tremendo por quê? Está tudo certo, está liberado.");
+    } else {
+        mostra("Chama um Uber, que dirigindo você não volta. Chorai.");
+    }
+
+
+</script>
+</body>
+</html>

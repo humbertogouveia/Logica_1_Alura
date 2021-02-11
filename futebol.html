@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo Javascript na Alura - Futebol</title>
+</head>
+<body>
+    <script>
+
+        function pulaLinha() {
+
+            document.write("<br>");
+            document.write("<br>");
+
+        }
+
+        function mostra (frase) {
+            document.write(frase)
+            pulaLinha();
+
+        }
+
+        //O Prompt eh um alert que vai receber o que o usuario digitar, que eh sempre uma string
+        //para converter uma string para um numero devemos usar a funcao parseInt(o que eu quero quer seja recebido como numero)
+
+        var vitorias = parseInt(prompt("Entre o numero de vitorias: ")); //recebo a string que o prompt recebeu como numero 
+        
+        var empates = parseInt(prompt("Entre com o numero de empates: ")); //recebo a string que o prompt recebeu como numero 
+
+        var pontos = (vitorias * 3) + empates; // As variaveis serao calculadas e armazenadas em pontos
+
+        mostra("Os pontos do seu time eh igual a " + pontos); //usuario ve na tela o resultado
+
+
+        if (pontos > 28){
+            mostra("Seu time esta melhor do que o ano passado");
+        }
+        if (pontos < 28) {
+            mostra("Seu time esta pior do que o ano passado");
+        }
+        if (pontos ==28) {
+            mostra("Seu time esta igual ao ano passado");
+        }
+        
+        mostra("FIM")
+
+
+    </script>
+    
+</body>
+</html>
