@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media idade familiares</title>
+</head>
+<body>
+    <script>
+
+function pulaLinha(){
+            document.write("<br><br>")
+        }
+
+        function mostra(frase) {
+            document.write(frase);
+        }
+        /* 
+
+        O programa feito de maneira tradiconal
+        
+        var idadePedro = 28; 
+        var idadeMarta = 32; 
+        var idadeJorge = 60; 
+        var idadeBete = 22; 
+
+        totalIdade = idadePedro + idadeMarta + idadeJorge + idadeBete;
+        media = totalIdade / 4;
+
+        mostra(media);
+        */
+
+        // programa feito com while
+
+        var totalFamiliares = parseInt(prompt("Digite a quantidade de familiares: "));
+
+        var contador = 1;
+        
+        while (contador <= totalFamiliares) {
+        var idade = parseInt(prompt("Informe a idade do familiar: "));
+            contador++;
+            
+        }
+
+        mostra("A media das idades é: " + (idadeFamiliar / 4));
+
+    </script>
+</body>
+</html>
