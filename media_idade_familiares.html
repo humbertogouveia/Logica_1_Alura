@@ -9,6 +9,8 @@
 <body>
     <script>
 
+
+
 function pulaLinha(){
             document.write("<br><br>")
         }
@@ -36,14 +38,19 @@ function pulaLinha(){
         var totalFamiliares = parseInt(prompt("Digite a quantidade de familiares: "));
 
         var contador = 1;
+        var totalIdade = 0;
         
         while (contador <= totalFamiliares) {
-        var idade = parseInt(prompt("Informe a idade do familiar: "));
+            
+            var idade = parseInt(prompt("Informe a idade do familiar: "));
+            totalIdade = totalIdade + idade;
             contador++;
             
         }
 
-        mostra("A media das idades é: " + (idadeFamiliar / 4));
+        var mediaDasIdades = totalIdade / totalFamiliares;
+
+        mostra("A media das idades é: " + (mediaDasIdades));
 
     </script>
 </body>

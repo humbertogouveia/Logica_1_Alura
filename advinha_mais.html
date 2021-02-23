@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advinha mais</title>
+</head>
+<body>
+
+    <input/>
+
+    <button> Compare com o meu segredo </button>
+    <script>
+
+        var segredo = Math.round(Math.random() * 10);
+
+        var input = document.querySelector('input');  //recebe como parâmetro a tag input
+        input.focus(); // aqui ja dou foco no campo na mesma hora que entram na area
+        function verifica() {
+            if (input.value == segredo) {
+
+            alert("Vc Acertou!");
+            }else {
+            alert("Você errou");
+             }
+             input.value = ""; // atribuimos um valor vazio ao campo, limpamos
+             input.focus(); //função dentro de um if, executada automaticamente após a caixa ser limpa
+
+                }
+
+          var button = document.querySelector( 'button');
+          button.onclick = verifica; //o verifica fica sem parenteses
+          // para que seja executado somente quando o button eh clicado,
+          //o verifica fica amarrado no button.onclick
+          //se eu deixo o parenteses e vai executar a funcao automaticamente
+
+
+        
+    </script>
+
+</body>
+</html>

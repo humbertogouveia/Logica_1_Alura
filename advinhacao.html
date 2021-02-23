@@ -23,15 +23,23 @@
     var numeroPensado = Math.round(Math.random() * 10);
     console.log(numeroPensado); //mostra no console da página, o numero que será sorteado
 
-    chute = parseInt(prompt("Digite seu chute: "));
-    
+    var chute = 1;
+
+    for (var contador = 0; chute <= 3 ; contador++) {
+
+        chute = parseInt(prompt("Digite seu chute: "));
+        
+    }
+
+
+    /*
     if (chute == numeroPensado) {
         mostra("O seu chute foi correto");
     } else {
         mostra("Que pena, o numero pensado é: " + numeroPensado); 
 
     }
-
+/*
 
     </script>    
     

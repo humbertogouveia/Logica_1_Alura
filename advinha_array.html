@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advinha mais</title>
+</head>
+<body>
+
+    <input/>
+
+    <button> Compare com o meu segredo </button>
+    <script>
+
+        var segredos = [5,7,10,2,3];                    // isto é um array, dentro de uma variável, consigo armazenar mais propridades
+                                                      // Para chamar a primeira opção, é 0. Temos que percorrer dentro do array
+                                                      // Para ver se o numero que quero esta dentr do Array
+
+        var input = document.querySelector('input');  // recebe como parâmetro a tag input
+        input.focus();                                // aqui ja dou foco no campo na mesma hora que entram na area
+        
+        function verifica() {
+            
+            var achou = false;    
+            
+            for(var posicao = 0;posicao < segredos.length; posicao++) { // quando coloco segredos.lenght, ja pego o tamanho que o array tem
+                                                                        // ao invés de fica digitando posicao < 4, posicao < 5 ao incluir mais um numero de segredo
+            
+            if (input.value == segredos[posicao]) {
+
+                alert("Vc Acertou!");
+                achou = true;                           // se eu acertei, a variavel achou = true, é verdadeira
+                break;                                  // Para o laço, se acertei e continua se acertei
+                    
+                }
+
+            }
+
+            if (achou == false) {                // se eu errei, ou seja, se o achou é = false
+                alert("Você errou!");
+                
+            }
+
+            input.value = "";
+                input.focus();
+
+
+        }
+               
+        
+    
+          var button = document.querySelector('button');
+              
+        button.onclick = verifica; //o verifica fica sem parenteses
+          
+                                                      // para que seja executado somente quando o button eh clicado,
+                                                     // o verifica fica amarrado no button.onclick
+                                                     // se eu deixo o parenteses e vai executar a funcao automaticamente
+
+        
+    </script>
+
+</body>
+</html>
